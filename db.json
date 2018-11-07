@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "Jonibek",
+      "password": "1234"
+    },
+    {
+      "email": "Jonibek@inbox.ru",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "email": "Navin@96",
+      "password": "199696",
+      "id": 3
+    }
+  ],
+  "workers": [
+    {
+      "id": 1,
+      "name": "Jonibek",
+      "birthday": "03.03.1997",
+      "city": "Dushanbe",
+      "family": "Single",
+      "tel": "933-03-18-19",
+      "email": "Jonibek1996@inbox.ru"
+    },
+    {
+      "id": 2,
+      "name": "Navjavon",
+      "birthday": "03.03.1996",
+      "city": "Dushanbe",
+      "family": "Single",
+      "tel": "933-03-18-19",
+      "email": "Jonibek1996@inbox.ru"
+    },
+    {
+      "id": 3,
+      "name": "Sinojon",
+      "birthday": "2018-11-10",
+      "city": "Душанбе",
+      "family": "Single",
+      "tel": "933-03-20-20",
+      "email": "wfm@ma.ru"
+    },
+    {
+      "name": "Manija",
+      "birthday": "2018-11-10",
+      "city": "Душанбе",
+      "family": "Single",
+      "tel": "933-03-18-00",
+      "email": "boss@mail.com",
+      "id": 6
+    },
+    {
+      "name": "Bobojon",
+      "birthday": "2018-11-10",
+      "city": "Душанбе",
+      "family": "Single",
+      "tel": "933-03-18-00",
+      "email": "boss@mail.com",
+      "id": 7
+    },
+    {
+      "name": "Isroil",
+      "birthday": "2018-11-22",
+      "city": "Душанбе",
+      "family": "Single",
+      "tel": "933-20-20-20",
+      "email": "isroil@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "Daler",
+      "birthday": "2018-11-09",
+      "city": "Душанбе",
+      "family": "Single",
+      "tel": "933-03-25-25",
+      "email": "daler@mail.ru",
+      "id": 9
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<div class="card shadow m-2 p-3 float-left w-100 d-block">
+  <h1 class="font-italic text-xl-center text-black-50">Velox Software</h1>
+  <div *ngFor="let name of workers" class="card m-2 mx-5 float-left" style="width:320px">
+    <div>
+      <img class="card-img-top"
+           src="{{name.name === 'Manija'? './assets/avatarFemale.jpg': './assets/img_avatar.png'}}" style="width:100%">
+    </div>
+    <div class="card-body">
+      <h4 class="card-title" (click)="toPage()">{{name.name}}</h4>
+      <p class="card-text">Workers Velox</p>
+    </div>
+  </div>
+</div>

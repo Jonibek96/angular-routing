@@ -1,0 +1,36 @@
+<div class="border float-left">
+  <div id="div-left" class="card shadow">
+    <p class="bg-light text-lg-right" *ngFor="let text of textArrSplit">
+    <span>
+      <div
+        #dragover
+        class="dragover"
+        (dragover)="allowDrop($event)"
+        (drop)="drop($event)"
+      ></div>
+      {{text}}
+    </span>
+    </p>
+    <div align="center">
+      <button
+        class="btn btn-primary m-1"
+        (click)="check()"
+        [disabled]="disableButton"
+        [class.btn-success]="!editing"
+      >
+        {{editing ? 'Check' : "Done"}}
+      </button>
+      <button class="btn btn-secondary" (click)="remove()" [disabled]="disableButton">Remove</button>
+    </div>
+  </div>
+  <div #divRight class="card shadow div-right">
+    <p
+      class="bg-light text-center card drag"
+      draggable="true"
+      (drag)="drag($event)"
+      *ngFor="let text of textAnswer"
+    ><span>{{text}}</span>
+    </p>
+  </div>
+</div>
+

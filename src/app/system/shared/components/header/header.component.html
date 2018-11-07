@@ -1,0 +1,32 @@
+<div class="d-block">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLinkActive="active"
+         [routerLink]="['/system','home']">
+        Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLinkActive="active"
+         [routerLink]="['/system','plagn']"
+      >
+        Plagn and Play</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLinkActive="active"
+         [routerLink]="['/system','draggula']"
+      >Draggula</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLinkActive="active"
+         [routerLink]="['/system','workers']"
+      >Workers</a>
+    </li>
+  </ul>
+  <button class="btn btn-link position-absolute" style="right:4px;top:0"
+  routerLink="/login"
+  >Logout</button>
+</div>

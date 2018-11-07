@@ -1,0 +1,13 @@
+<div class="card shadow m-2 p-3 float-left w-100 d-block">
+  <h4>{{msg}}</h4>
+  <div class="shadow  float-left m-2 w-25">
+    <ul class="list-inline p-2" [dragula]='"bag-items"' [dragulaModel]='numberTextEn'>
+      <li class="bg-light m-1 p-1" *ngFor="let num of numberTextEn; let id = index">{{id+1 +'.'+num}}</li>
+    </ul>
+  </div>
+  <div class="shadow float-left m-2 w-25" id="div" >
+    <ul class="list-inline p-2" app-Drag  [dragula]='"bag-items"' [dragulaModel]='numberTextRus' >
+      <li class="bg-light m-1 p-1"  *ngFor="let num of numberTextRus; let id = index" >{{id+1 + '.' +num}}</li>
+    </ul>
+  </div>
+</div>

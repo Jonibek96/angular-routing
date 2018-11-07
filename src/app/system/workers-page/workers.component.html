@@ -1,0 +1,87 @@
+<h1>Workers</h1>
+<a routerLink="add" class="btn btn-success m-2">Add workers</a>
+<input type="text" class="form-control m-1 col-xl-8 float-right" placeholder="Search..." [(ngModel)]="search">
+<h4 class="text-success">{{statusMessage}}</h4>
+<table class="table">
+  <thead>
+  <tr>
+    <th>№</th>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>City</th>
+    <th>Family status</th>
+    <th>Tell</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let works of workersPage | filter : search: 'name' ; let id = index">
+    <td>{{id + 1}}</td>
+    <td>{{works.name}}</td>
+    <td>{{works.birthday}}</td>
+    <td>{{works.city}}</td>
+    <td>{{works.family}}</td>
+    <td>{{works.tel}}</td>
+    <td>{{works.email}}</td>
+    <td><a
+      (click)="deleteWorkers(works.id)"
+      class="btn btn-danger text-white">Delete</a></td>
+    <td><a
+      class="btn btn-success text-white" (click)="editWorker(works)">Rename</a></td>
+  </tr>
+  <tr *ngFor="let works of workersPage;">
+    <ng-template [ngTemplateOutlet]="loadTemplate(works)">
+    </ng-template>
+  </tr>
+  </tbody>
+</table>
+<ng-template #editTemplate>
+  <td>
+    <input type="text" [(ngModel)]="editworkers.id" readonly disabled class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="editworkers.name" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="editworkers.birthday" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="editworkers.city" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="editworkers.family" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="editworkers.tel" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="editworkers.email" class="form-control" />
+  </td>
+  <td>
+    <input type="button" value="Сохранить" (click)="saveWorkers()" class="btn btn-success" />
+  </td>
+  <td>
+    <input type="button" value="Отмена" (click)="cancel()"  class="btn btn-default" />
+  </td>
+</ng-template>
+
+<div class="float-left form-inline">
+  <select class="form-control"
+          [value]="workersPerPage"
+          (change)="changePageSize($event.target.value)">
+    <option value="2">2 страница</option>
+    <option value="4">4 страница</option>
+    <option value="6">6 страница</option>
+  </select>
+</div>
+<div class="btn-group float-right " style="z-index: 0">
+  <button *counter="let page of pageCount" (click)="changePage(page)"
+          class="btn btn-outline-primary" [class.active]="page == selectedPage">
+    {{page}}
+  </button>
+</div>
+<div class="form-group">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,32 @@
+#div-left{
+  float: left;
+  width: 830px;
+  max-width: 835px;
+  min-width: 835px;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  line-height: 50px;
+  font-size: 16px;
+}
+.div-right{
+  margin: 10px;
+  float: left;
+  width: 430px;
+  height: 320px;
+  padding: 10px;
+  line-height: 50px;
+  font-size: 16px;
+}
+.dragover{
+  width: 120px;
+  min-width: 120px;
+  height: 40px;
+  float: right;
+  margin: 3px;
+  border: 2px solid  lightblue;
+  background-color: white;
+  overflow: hidden;
+}
+
+
