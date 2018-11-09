@@ -13,9 +13,15 @@ import {AuthGuard} from '../model/auth.guard';
 const routes: Routes = [
   {
     path: '', component: SystemComponent, canActivate: [AuthGuard], children: [
-      {path: 'home', component: HomeComponent},
-      {path: 'draggula', component: DragulaComponent},
-      {path: 'plagn', component: PlagnPlayComponent},
+      {path: 'home', component: HomeComponent, data: {
+        page:'home'
+        }},
+      {path: 'draggula', component: DragulaComponent, data: {
+        page: 'draggula'
+        }},
+      {path: 'plagn', component: PlagnPlayComponent, data: {
+        page: 'plagn'
+        }},
       {
         path: 'workers', component: WorkersComponent, children: [
           {path: 'add', component: WorkersAddComponent}
